@@ -194,24 +194,45 @@ footer{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 0 20px;
- 
-
+    padding: 0 5px;
 }
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los dos divs */
+    align-items: center; /* Alineación vertical */
+  }
+
 .imagen-laterales{
     display: flex;
-    justify-content: space-between;
-    flex-direction: column; /* Cambia la dirección a columna */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido de la izquierda */
+}
+
+.text-bajo-logo {
     color: white;
-}
+    font-size: small;
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
 
-
-footer p{
-    margin: 0; /* Elimina márgenes extra del texto */
+  .informativo {
+    text-align: left; /* Alinea todo el texto dentro de .informativo a la izquierda */
+    color: white;
     font-size: 12px;
-}
+  }
 
+  .informativo p:first-child {
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    color: #ee0505; /* Cambia el color del texto, puedes elegir otro color */
+    margin-bottom: 5px; /* Espacio debajo del primer párrafo */
+  }
+
+  .informativo p {
+    font-size: 1em; /* Tamaño de fuente normal para los demás párrafos */
+    color: rgb(255, 255, 255); /* Color blanco para los otros textos */
+    text-align: left; /* Asegura que los textos también estén alineados a la izquierda */
+  }
 
 /* Ocultar menú en dispositivos móviles por defecto */
 @media (max-width: 768px) {
@@ -260,7 +281,5 @@ footer p{
         padding: 0 0; /* Añade algo de padding para centrar el mapa */
     }
 
-    footer p{
-        font-size: x-small;
-    }
+
 }
